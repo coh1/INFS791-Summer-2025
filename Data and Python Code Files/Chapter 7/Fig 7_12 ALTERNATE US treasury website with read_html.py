@@ -1,5 +1,11 @@
 import pandas as pd
 
+#brings in the ssl module, which provides functionalities for working with Secure Sockets Layer (SSL) and Transport Layer Security (TLS).
+import ssl
+
+#disables SSL/TLS certificate verification for all subsequent HTTPS connections made using the default ssl context.
+ssl._create_default_https_context = ssl._create_unverified_context
+
 # The following line assigns the URL of interest to a variable
 cta_bus_routes_url = "https://en.wikipedia.org/wiki/List_of_Chicago_Transit_Authority_bus_routes"
 
